@@ -12,6 +12,15 @@ class Counter extends Component {
 
     return (
       <React.Fragment>
+        <audio id="winSound">
+          <source src="assets/sounds/cash.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="lostSound">
+          <source src="assets/sounds/aww.mp3" type="audio/mpeg"></source>
+        </audio>
+        <audio id="tiedSound">
+          <source src="assets/sounds/swish.m4a" type="audio/mpeg"></source>
+        </audio>
         <nav className="black">
           <div className="nav-wrapper">
             <a href="#!" className="brand-logo">

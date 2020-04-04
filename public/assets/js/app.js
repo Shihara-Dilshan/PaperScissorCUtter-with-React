@@ -7,6 +7,9 @@ const result_p = document.querySelector(".result > p");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
 const scissor_div = document.getElementById("s");
+const winsound = document.getElementById("winSound");
+const Lostsound = document.getElementById("lostSound");
+const Tiedsound = document.getElementById("tiedSound");
 
 function getComputerChoice() {
   const choices = ["r", "p", "s"];
@@ -15,6 +18,7 @@ function getComputerChoice() {
 }
 
 function win(user, computer) {
+  winsound.play();
   userScore++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
@@ -36,6 +40,7 @@ function win(user, computer) {
 }
 
 function draw(user, computer) {
+  Tiedsound.play();
   result_p.innerHTML =
     "Computer picked " + convertName(computer) + " : ROUND TIED";
   document.getElementById(user).classList.add("grey-glow");
@@ -54,6 +59,7 @@ function draw(user, computer) {
 }
 
 function loose(user, computer) {
+  Lostsound.play();
   computerScore++;
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML =

@@ -22,16 +22,16 @@ class Counter extends Component {
             </a>
             <ul className="right hide-on-med-and-down">
               <li>
-                <a href="#!">Sass</a>
+                <a href="#!">Help</a>
               </li>
               <li>
-                <a href="#!">Components</a>
+                <a href="#!">Donate</a>
               </li>
               <li>
-                <a href="#!">Javascript</a>
+                <a href="#!">Developer</a>
               </li>
               <li>
-                <a href="#!">Mobile</a>
+                <a href="#!">About</a>
               </li>
             </ul>
           </div>
@@ -40,22 +40,22 @@ class Counter extends Component {
         <ul className="sidenav" id="mobile-demo">
           <li>
             <a href="#!" className="left-align">
-              Sass
+              Help
             </a>
           </li>
           <li>
             <a href="#!" className="left-align">
-              Components
+              Donate
             </a>
           </li>
           <li>
             <a href="#!" className="left-align">
-              Javascript
+              Deveoper
             </a>
           </li>
           <li>
             <a href="#!" className="left-align">
-              Mobile
+              About
             </a>
           </li>
         </ul>

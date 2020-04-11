@@ -22,7 +22,7 @@ class Counter extends Component {
           <source src="assets/sounds/swish.m4a" type="audio/mpeg"></source>
         </audio>
         <nav className="black">
-          <div className="nav-wrapper">
+          <div className="nav-wrapper left-align">
             <a href="#!" className="brand-logo">
               React App
             </a>

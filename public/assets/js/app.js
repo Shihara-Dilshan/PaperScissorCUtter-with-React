@@ -307,12 +307,35 @@ function sideNev() {
       <h6>Docs</h6>
      
        `;
-      result.innerHTML = `<p id="git" class="flow-text ">Rock Paper Scissor<br><br> This App Purely written on <span class="teal-text">JAVASCRIPT</span>.
-          <br> This App uses the react library developed by <span class="teal-text">Facebook</span>. Source code is Available on my <span class="teal-text">GitHub </p>
-    
+      result.innerHTML = `<ol id="git" class="flow-text ">Rock Paper Scissor<br><br><h6>This screeshot shows the starting point
+      of the game</h6><br> <img id="img2" 
+      src="https://raw.githubusercontent.com/Shihara-Dilshan/PaperScissorCUtter-with-React-and-MaterializeCSS/master/public/assets/images/Screenshot_20200413-233748.jpg" >
+      <h6>There are 3 rules of this game.
+      of the game</h6><br> 
+      <h6>
+      <ul id="list">
+      <li>Rock can beat Scissor</li><br>
+      <li>Scissor can beat Paper</li><br>
+      <li>Paper can beat Rock</li><br>
+      </ul>
+      </h6>
+      <br><h6>You can start the game by touching(clicking) one the 3 choices. Rock , Paper Or Scissor. When you
+      made your 1st choice the round starts.
+      </h6><br> 
+      <br> <img id="img2" 
+      src="https://raw.githubusercontent.com/Shihara-Dilshan/PaperScissorCUtter-with-React-and-MaterializeCSS/master/public/assets/images/Screenshot_20200413-233641.jpg" >
     <br> 
-      
-      <button class="btn" id="profile_btn"> Go Back </button>`;
+    <br><h6>Depending on the above 3 Rules you will win agianst the the computer or you will loose. 
+    The round can be tied If the Computer pik the same choice as yours(e.g : You pick Rock , Computer also pick Rock)
+    </h6><br> 
+    <br> <img id="img2" 
+      src="https://raw.githubusercontent.com/Shihara-Dilshan/PaperScissorCUtter-with-React-and-MaterializeCSS/master/public/assets/images/Screenshot_20200413-233723.jpg" >
+    <br> <br><h6> The First one to reach 10 marks will win the game. 
+    </h6><br> 
+    <img id="img2" 
+      src="https://raw.githubusercontent.com/Shihara-Dilshan/PaperScissorCUtter-with-React-and-MaterializeCSS/master/public/assets/images/Screenshot_20200413-233742.jpg" >
+    <br>  <br>  <br> 
+      <button class="btn" id="profile_btn"> Go Back </button>  <br>  <br>  <br> `;
       imageDev.innerHTML = ``;
       scoreBoard_div.style.border = "0px";
 

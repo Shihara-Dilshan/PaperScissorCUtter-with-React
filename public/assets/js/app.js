@@ -277,13 +277,14 @@ function sideNev() {
       img.src = "81445069.jpg";
       scoreBoard_div.innerHTML = `<img id="img1" 
       src="https://raw.githubusercontent.com/Shihara-Dilshan/PaperScissorCUtter-with-React-and-MaterializeCSS/master/public/assets/images/PSC.jpg" ><br>
-      <h6>ShiharaD</h6>
+      <h6>V1.1</h6>
      
        `;
-      result.innerHTML = `<h6 id="git">GitHub<br> 
-      <a href="https://github.com/Shihara-Dilshan">https://github.com/Shihara-Dilshan</a><br>
-      </h6><h6>Linkedin <br> <a href="https://www.linkedin.com/in/shihara-dilshan-5297711a4/">
-      https://www.linkedin.com/in/shihara-dilshan-5297711a4/</a><br></h6><br>
+      result.innerHTML = `<p id="git" class="flow-text ">Developed by Shihara Dilshan.<br> This App Purely written on <span class="teal-text">JAVASCRIPT</span>.
+          <br> This App uses the react library developed by <span class="teal-text">Facebook</span>. Source code is Available on my <span class="teal-text">GitHub </p>
+    
+    <br> 
+      
       <button class="btn" id="profile_btn"> Go Back </button>`;
       imageDev.innerHTML = ``;
       scoreBoard_div.style.border = "0px";

@@ -132,7 +132,10 @@ function main() {
 
 function finalscore() {
   if (userScore == 5 && computerScore < 5) {
-    imgContainer.innerHTML = "<h3>Congrats YOU WON</h3> <br><br>";
+    let text = (document.createElement("h3").innerHTMl =
+      "<h3>Congrats YOU WON</h3> <br><br>");
+
+    imgContainer.innerHTML = text;
     //create Restart button
     let btn_try = document.createElement("btn");
     btn_try.classList.add("btn");

@@ -133,7 +133,7 @@ function main() {
 function finalscore() {
   if (userScore == 5 && computerScore < 5) {
     let text = (document.createElement("h3").innerHTMl =
-      "<h3>Congrats YOU WON</h3> <br><br>");
+      "<h4>Congrats YOU WON</h4> <br><br>");
 
     imgContainer.innerHTML = text;
     //create Restart button
@@ -165,7 +165,7 @@ function finalscore() {
     imgContainer.appendChild(btn_quite);
     result.classList.add("hide");
   } else if (userScore == 5 && computerScore == 5) {
-    imgContainer.innerHTML = "<h3>ROUND TIED</h3><br><br>";
+    imgContainer.innerHTML = "<h4>ROUND TIED</h4><br><br>";
     //create Restart button
     let btn_try = document.createElement("btn");
     btn_try.classList.add("btn");
@@ -195,7 +195,7 @@ function finalscore() {
     imgContainer.appendChild(btn_quite);
     result.classList.add("hide");
   } else if (userScore < 5 && computerScore == 5) {
-    imgContainer.innerHTML = "<h3>OOPS! YOU LOST</h3 <br><br>";
+    imgContainer.innerHTML = "<h4>OOPS! YOU LOST</h4 <br><br>";
 
     //create Restart button
     let btn_try = document.createElement("btn");

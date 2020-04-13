@@ -240,6 +240,7 @@ function sideNev() {
     event.addEventListener("click", function () {
       computerScore = 0;
       userScore = 0;
+      startAlert = 0;
       computerScore_span.innerHTML = computerScore;
       userScore_span.innerHTML = userScore;
       result_p.innerHTML = "click on a following start the round";

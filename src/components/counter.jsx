@@ -36,12 +36,12 @@ class Counter extends Component {
                 </a>
               </li>
               <li>
-                <a href="#!" id="help">
+                <a href="#!" className="help">
                   Help
                 </a>
               </li>
               <li>
-                <a href="#!" id="agame">
+                <a href="#!" className="agame">
                   About Game
                 </a>
               </li>
@@ -61,12 +61,12 @@ class Counter extends Component {
             </a>
           </li>
           <li>
-            <a href="#!" className="left-align" id="help">
+            <a href="#!" className="left-align help sidenav-close">
               Help
             </a>
           </li>
           <li>
-            <a href="#!" className="left-align" id="agame">
+            <a href="#!" className="left-align agame sidenav-close">
               About Game
             </a>
           </li>

@@ -24,7 +24,7 @@ class Counter extends Component {
         <nav className="black">
           <div className="nav-wrapper left-align">
             <a href="#!" className="brand-logo">
-              React App
+              React Games
             </a>
             <a href="#!" data-target="mobile-demo" className="sidenav-trigger">
               <i className="material-icons">menu</i>

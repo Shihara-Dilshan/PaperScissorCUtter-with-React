@@ -21,7 +21,7 @@ class Logic extends Component {
           </span>
         </div>
         <div className="result">
-          <p>Choose one to start the round </p>
+          <p>click on a following start the round </p>
         </div>
       </React.Fragment>
     );

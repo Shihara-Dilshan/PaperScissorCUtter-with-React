@@ -6,6 +6,7 @@ class Game extends Component {
   render() {
     return (
       <div className="choices">
+        <hr></hr>
         <div className="choice" id="r">
           <img src="assets/images/rock.png" alt=""></img>
         </div>
@@ -15,8 +16,9 @@ class Game extends Component {
         <div className="choice" id="s">
           <img src="assets/images/scissor.png" alt=""></img>
         </div>
+        <hr></hr>
 
-        <p id="action-message">Make your move</p>
+        <p id="action-message">Rock || Scissor || Cutter</p>
       </div>
     );
   }

@@ -17,6 +17,7 @@ const nevRestart = document.querySelectorAll(".restart");
 const nevDeveloper = document.querySelectorAll(".adeveloper");
 const imageDev = document.querySelector(".choices");
 const nevGame = document.querySelectorAll(".agame");
+const nevHelp = document.querySelectorAll(".help");
 
 function getComputerChoice() {
   const choices = ["r", "p", "s"];
@@ -282,6 +283,31 @@ function sideNev() {
      
        `;
       result.innerHTML = `<p id="git" class="flow-text ">Developed by Shihara Dilshan.<br> This App Purely written on <span class="teal-text">JAVASCRIPT</span>.
+          <br> This App uses the react library developed by <span class="teal-text">Facebook</span>. Source code is Available on my <span class="teal-text">GitHub </p>
+    
+    <br> 
+      
+      <button class="btn" id="profile_btn"> Go Back </button>`;
+      imageDev.innerHTML = ``;
+      scoreBoard_div.style.border = "0px";
+
+      profile_btn.addEventListener("click", function () {
+        location.reload();
+      });
+    });
+  });
+
+  nevHelp.forEach(function (event) {
+    event.addEventListener("click", function () {
+      let img = document.createElement("img");
+      img.setAttribute("alt", "");
+      img.src = "81445069.jpg";
+      scoreBoard_div.innerHTML = `<img id="img1" 
+      src="https://raw.githubusercontent.com/Shihara-Dilshan/PaperScissorCUtter-with-React-and-MaterializeCSS/master/public/assets/images/Rock-paper-scissors.jpeg" ><br>
+      <h6>Docs</h6>
+     
+       `;
+      result.innerHTML = `<p id="git" class="flow-text ">Rock Paper Scissor<br><br> This App Purely written on <span class="teal-text">JAVASCRIPT</span>.
           <br> This App uses the react library developed by <span class="teal-text">Facebook</span>. Source code is Available on my <span class="teal-text">GitHub </p>
     
     <br> 

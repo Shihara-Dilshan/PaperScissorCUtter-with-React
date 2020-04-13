@@ -42,7 +42,7 @@ class Counter extends Component {
               </li>
               <li>
                 <a href="#!" className="agame">
-                  About Game
+                  About App
                 </a>
               </li>
               <li>
@@ -67,7 +67,7 @@ class Counter extends Component {
           </li>
           <li>
             <a href="#!" className="left-align agame sidenav-close">
-              About Game
+              About App
             </a>
           </li>
           <li>

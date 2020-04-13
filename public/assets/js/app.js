@@ -1,8 +1,9 @@
 let userScore = 0;
 let computerScore = 0;
+let startAlert = 0;
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
-const scoreBoard_div = document.querySelector("score-board");
+const scoreBoard_div = document.querySelector(".score-board");
 const result_p = document.querySelector(".result > p");
 const rock_div = document.getElementById("r");
 const paper_div = document.getElementById("p");
@@ -12,6 +13,9 @@ const Lostsound = document.getElementById("lostSound");
 const Tiedsound = document.getElementById("tiedSound");
 const imgContainer = document.querySelector(".choices");
 const result = document.querySelector(".result");
+const nevRestart = document.querySelectorAll(".restart");
+const nevDeveloper = document.querySelectorAll(".adeveloper");
+const imageDev = document.querySelector(".choices");
 
 function getComputerChoice() {
   const choices = ["r", "p", "s"];
@@ -119,19 +123,32 @@ function game(userChoice) {
 function main() {
   rock_div.addEventListener("click", function () {
     game("r");
+    if (startAlert === 0) {
+      M.toast({ html: "Round Started" });
+      startAlert++;
+    }
   });
 
   paper_div.addEventListener("click", function () {
     game("p");
+    if (startAlert === 0) {
+      M.toast({ html: "Round Started" });
+      startAlert++;
+    }
   });
 
   scissor_div.addEventListener("click", function () {
     game("s");
+    if (startAlert === 0) {
+      M.toast({ html: "Round Started" });
+      startAlert++;
+    }
   });
+  sideNev();
 }
 
 function finalscore() {
-  if (userScore > 5 && computerScore <= 5) {
+  if (userScore >= 10 && computerScore < 10) {
     let text = (document.createElement("h3").innerHTMl =
       "<h4>Congrats YOU WON</h4> <br><br>");
 
@@ -141,9 +158,7 @@ function finalscore() {
     btn_try.classList.add("btn");
     btn_try.style.width = "40%";
     btn_try.innerHTML = "Restart";
-    btn_try.addEventListener("click", function () {
-      location.reload();
-    });
+    btn_try.addEventListener("click", () => location.reload());
 
     //create Exit button
     let btn_quite = document.createElement("btn");
@@ -151,9 +166,7 @@ function finalscore() {
     btn_quite.classList.add("red");
     btn_quite.style.width = "40%";
     btn_quite.innerHTML = "Exit";
-    btn_quite.addEventListener("click", function () {
-      close();
-    });
+    btn_quite.addEventListener("click", () => close());
 
     //create break tag
     let breakTag = document.createElement("br");
@@ -164,16 +177,14 @@ function finalscore() {
     imgContainer.appendChild(breakTag);
     imgContainer.appendChild(btn_quite);
     result.classList.add("hide");
-  } else if (userScore == 5 && computerScore == 5) {
+  } else if (userScore == 10 && computerScore == 10) {
     imgContainer.innerHTML = "<h4>ROUND TIED</h4><br><br>";
     //create Restart button
     let btn_try = document.createElement("btn");
     btn_try.classList.add("btn");
     btn_try.style.width = "40%";
     btn_try.innerHTML = "Restart";
-    btn_try.addEventListener("click", function () {
-      location.reload();
-    });
+    btn_try.addEventListener("click", () => location.reload());
 
     //create Exit button
     let btn_quite = document.createElement("btn");
@@ -181,9 +192,7 @@ function finalscore() {
     btn_quite.classList.add("red");
     btn_quite.style.width = "40%";
     btn_quite.innerHTML = "Exit";
-    btn_quite.addEventListener("click", function () {
-      close();
-    });
+    btn_quite.addEventListener("click", () => close());
 
     //create break tag
     let breakTag = document.createElement("br");
@@ -194,7 +203,7 @@ function finalscore() {
     imgContainer.appendChild(breakTag);
     imgContainer.appendChild(btn_quite);
     result.classList.add("hide");
-  } else if (userScore < 5 && computerScore >= 5) {
+  } else if (userScore < 10 && computerScore >= 10) {
     imgContainer.innerHTML = "<h4>OOPS! YOU LOST</h4 <br><br>";
 
     //create Restart button
@@ -202,9 +211,7 @@ function finalscore() {
     btn_try.classList.add("btn");
     btn_try.style.width = "40%";
     btn_try.innerHTML = "Restart";
-    btn_try.addEventListener("click", function () {
-      location.reload();
-    });
+    btn_try.addEventListener("click", () => location.reload());
 
     //create Exit button
     let btn_quite = document.createElement("btn");
@@ -212,9 +219,7 @@ function finalscore() {
     btn_quite.classList.add("red");
     btn_quite.style.width = "40%";
     btn_quite.innerHTML = "Exit";
-    btn_quite.addEventListener("click", function () {
-      close();
-    });
+    btn_quite.addEventListener("click", () => close());
 
     //create break tag
     let breakTag = document.createElement("br");
@@ -227,6 +232,42 @@ function finalscore() {
     result.classList.add("hide");
   } else {
   }
+}
+
+function sideNev() {
+  nevRestart.forEach(function (event) {
+    event.addEventListener("click", function () {
+      computerScore = 0;
+      userScore = 0;
+      computerScore_span.innerHTML = computerScore;
+      userScore_span.innerHTML = userScore;
+      result_p.innerHTML = "click on a following start the round";
+    });
+  });
+
+  nevDeveloper.forEach(function (event) {
+    event.addEventListener("click", function () {
+      let img = document.createElement("img");
+      img.setAttribute("alt", "");
+      img.src = "81445069.jpg";
+      scoreBoard_div.innerHTML = `<img id="img1" 
+      src="https://raw.githubusercontent.com/Shihara-Dilshan/PaperScissorCUtter-with-React-and-MaterializeCSS/master/public/assets/images/81445069.jpg" ><br>
+      <h6>ShiharaD</h6>
+     
+       `;
+      result.innerHTML = `<h6 id="git">GitHub<br> 
+      <a href="https://github.com/Shihara-Dilshan">https://github.com/Shihara-Dilshan</a><br>
+      </h6><h6>Linkedin <br> <a href="https://www.linkedin.com/in/shihara-dilshan-5297711a4/">
+      https://www.linkedin.com/in/shihara-dilshan-5297711a4/</a><br></h6><br>
+      <button class="btn" id="profile_btn"> Go Back </button>`;
+      imageDev.innerHTML = ``;
+      scoreBoard_div.style.border = "0px";
+
+      profile_btn.addEventListener("click", function () {
+        location.reload();
+      });
+    });
+  });
 }
 
 main();

@@ -31,16 +31,24 @@ class Counter extends Component {
             </a>
             <ul className="right hide-on-med-and-down">
               <li>
-                <a href="#!">Help</a>
+                <a href="#!" className="restart">
+                  Restart
+                </a>
               </li>
               <li>
-                <a href="#!">Donate</a>
+                <a href="#!" id="help">
+                  Help
+                </a>
               </li>
               <li>
-                <a href="#!">Developer</a>
+                <a href="#!" id="agame">
+                  About Game
+                </a>
               </li>
               <li>
-                <a href="#!">About</a>
+                <a href="#!" className="adeveloper">
+                  About Developer
+                </a>
               </li>
             </ul>
           </div>
@@ -48,23 +56,23 @@ class Counter extends Component {
 
         <ul className="sidenav" id="mobile-demo">
           <li>
-            <a href="#!" className="left-align">
+            <a href="#!" className="left-align restart sidenav-close">
+              Restart
+            </a>
+          </li>
+          <li>
+            <a href="#!" className="left-align" id="help">
               Help
             </a>
           </li>
           <li>
-            <a href="#!" className="left-align">
-              Donate
+            <a href="#!" className="left-align" id="agame">
+              About Game
             </a>
           </li>
           <li>
-            <a href="#!" className="left-align">
-              Deveoper
-            </a>
-          </li>
-          <li>
-            <a href="#!" className="left-align">
-              About
+            <a href="#!" className="left-align adeveloper sidenav-close">
+              About Developer
             </a>
           </li>
         </ul>

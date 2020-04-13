@@ -131,7 +131,7 @@ function main() {
 }
 
 function finalscore() {
-  if (userScore == 5 && computerScore < 5) {
+  if (userScore > 5 && computerScore <= 5) {
     let text = (document.createElement("h3").innerHTMl =
       "<h4>Congrats YOU WON</h4> <br><br>");
 
@@ -194,7 +194,7 @@ function finalscore() {
     imgContainer.appendChild(breakTag);
     imgContainer.appendChild(btn_quite);
     result.classList.add("hide");
-  } else if (userScore < 5 && computerScore == 5) {
+  } else if (userScore < 5 && computerScore >= 5) {
     imgContainer.innerHTML = "<h4>OOPS! YOU LOST</h4 <br><br>";
 
     //create Restart button

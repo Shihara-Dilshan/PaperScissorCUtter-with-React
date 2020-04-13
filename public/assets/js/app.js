@@ -276,7 +276,7 @@ function sideNev() {
       img.setAttribute("alt", "");
       img.src = "81445069.jpg";
       scoreBoard_div.innerHTML = `<img id="img1" 
-      src="https://raw.githubusercontent.com/Shihara-Dilshan/PaperScissorCUtter-with-React-and-MaterializeCSS/master/public/assets/images/81445069.jpg" ><br>
+      src="https://raw.githubusercontent.com/Shihara-Dilshan/PaperScissorCUtter-with-React-and-MaterializeCSS/master/public/assets/images/PSC.jpg" ><br>
       <h6>ShiharaD</h6>
      
        `;

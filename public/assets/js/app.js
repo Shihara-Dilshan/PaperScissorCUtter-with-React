@@ -10,6 +10,8 @@ const scissor_div = document.getElementById("s");
 const winsound = document.getElementById("winSound");
 const Lostsound = document.getElementById("lostSound");
 const Tiedsound = document.getElementById("tiedSound");
+const imgContainer = document.querySelector(".choices");
+const result = document.querySelector(".result");
 
 function getComputerChoice() {
   const choices = ["r", "p", "s"];
@@ -37,6 +39,7 @@ function win(user, computer) {
   setTimeout(function () {
     document.getElementById("head").classList.remove("headerwon");
   }, 1500);
+  finalscore();
 }
 
 function draw(user, computer) {
@@ -56,6 +59,7 @@ function draw(user, computer) {
   setTimeout(function () {
     document.getElementById("head").classList.remove("headertied");
   }, 1500);
+  finalscore();
 }
 
 function loose(user, computer) {
@@ -77,6 +81,7 @@ function loose(user, computer) {
   setTimeout(function () {
     document.getElementById("head").classList.remove("headerloose");
   }, 1500);
+  finalscore();
 }
 
 function convertName(name) {
@@ -123,6 +128,102 @@ function main() {
   scissor_div.addEventListener("click", function () {
     game("s");
   });
+}
+
+function finalscore() {
+  if (userScore == 5 && computerScore < 5) {
+    imgContainer.innerHTML = "<h3>Congrats YOU WON</h3> <br><br>";
+    //create Restart button
+    let btn_try = document.createElement("btn");
+    btn_try.classList.add("btn");
+    btn_try.style.width = "40%";
+    btn_try.innerHTML = "Restart";
+    btn_try.addEventListener("click", function () {
+      location.reload();
+    });
+
+    //create Exit button
+    let btn_quite = document.createElement("btn");
+    btn_quite.classList.add("btn");
+    btn_quite.classList.add("red");
+    btn_quite.style.width = "40%";
+    btn_quite.innerHTML = "Exit";
+    btn_quite.addEventListener("click", function () {
+      close();
+    });
+
+    //create break tag
+    let breakTag = document.createElement("br");
+
+    btn_quite.style.marginTop = "10px";
+
+    imgContainer.appendChild(btn_try);
+    imgContainer.appendChild(breakTag);
+    imgContainer.appendChild(btn_quite);
+    result.classList.add("hide");
+  } else if (userScore == 5 && computerScore == 5) {
+    imgContainer.innerHTML = "<h3>ROUND TIED</h3><br><br>";
+    //create Restart button
+    let btn_try = document.createElement("btn");
+    btn_try.classList.add("btn");
+    btn_try.style.width = "40%";
+    btn_try.innerHTML = "Restart";
+    btn_try.addEventListener("click", function () {
+      location.reload();
+    });
+
+    //create Exit button
+    let btn_quite = document.createElement("btn");
+    btn_quite.classList.add("btn");
+    btn_quite.classList.add("red");
+    btn_quite.style.width = "40%";
+    btn_quite.innerHTML = "Exit";
+    btn_quite.addEventListener("click", function () {
+      close();
+    });
+
+    //create break tag
+    let breakTag = document.createElement("br");
+
+    btn_quite.style.marginTop = "10px";
+
+    imgContainer.appendChild(btn_try);
+    imgContainer.appendChild(breakTag);
+    imgContainer.appendChild(btn_quite);
+    result.classList.add("hide");
+  } else if (userScore < 5 && computerScore == 5) {
+    imgContainer.innerHTML = "<h3>OOPS! YOU LOST</h3 <br><br>";
+
+    //create Restart button
+    let btn_try = document.createElement("btn");
+    btn_try.classList.add("btn");
+    btn_try.style.width = "40%";
+    btn_try.innerHTML = "Restart";
+    btn_try.addEventListener("click", function () {
+      location.reload();
+    });
+
+    //create Exit button
+    let btn_quite = document.createElement("btn");
+    btn_quite.classList.add("btn");
+    btn_quite.classList.add("red");
+    btn_quite.style.width = "40%";
+    btn_quite.innerHTML = "Exit";
+    btn_quite.addEventListener("click", function () {
+      close();
+    });
+
+    //create break tag
+    let breakTag = document.createElement("br");
+
+    btn_quite.style.marginTop = "10px";
+
+    imgContainer.appendChild(btn_try);
+    imgContainer.appendChild(breakTag);
+    imgContainer.appendChild(btn_quite);
+    result.classList.add("hide");
+  } else {
+  }
 }
 
 main();
